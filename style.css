@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&display=swap");
+@font-face {
+  font-family: BloggerSans-Bold;
+  src: url(fonts/Blogger/BloggerSans-Bold.ttf);
+}
+@media (min-width: 1600px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1440px !important;
+  }
+}
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.btn-lg-square {
+  padding: 9px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff !important;
+  margin-left: 24px;
+  background-color: #0033FF;
+}
+
+.btn-lg-rounded {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #FF0090;
+  border-radius: 120px;
+  margin-top: 24px;
+  transition: ease 0.3s;
+}
+.btn-lg-rounded.btn-icon {
+  padding-left: 2px;
+  font-size: 16px;
+}
+.btn-lg-rounded i {
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff;
+  color: #FF0090;
+  border-radius: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 12px 0;
+  margin-right: 7px;
+}
+.btn-lg-rounded:hover {
+  color: #ffffff;
+  background-color: #C70070;
+  text-decoration: none;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  padding: 96px 0;
+}
+section .section-heading {
+  font-size: 42px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 12px;
+}
+section .section-heading .focused-text {
+  font-weight: 800;
+  color: #0033FF;
+}
+
+.nav-clean {
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 0;
+  z-index: 3;
+}
+.nav-clean .navbar-nav .nav-item .nav-link {
+  padding-left: 16px;
+  padding-right: 16px;
+  color: white;
+}
+.nav-clean .navbar-nav .nav-item.active .nav-link {
+  text-decoration: underline;
+}
+
+.header-main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.header-main .carousel-indicators {
+  position: absolute !important;
+  left: 100%;
+  margin-left: -48px !important;
+  top: 0%;
+  height: 100%;
+  z-index: 3;
+  width: 48px;
+  display: block;
+  margin-right: 0;
+  padding-top: 45vh;
+}
+.header-main .carousel-indicators li {
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 3px solid #FFFF00;
+  margin: 9px 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.header-main .carousel-indicators li.active {
+  background-color: #FFFF00;
+  border: 0;
+}
+.header-main .carousel-caption {
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  text-align: left;
+  padding-top: 25vh;
+  background-color: rgba(25, 0, 83, 0.5);
+}
+.header-main .carousel-caption .title-strong {
+  font-weight: 800;
+  font-size: 64px;
+  color: #FFFF00;
+}
+.header-main .carousel-caption .title-medium {
+  font-weight: 500;
+  font-size: 58px;
+}
+.header-main .carousel-caption .title-light {
+  font-weight: 400;
+  border-left: 2px solid white;
+  padding-left: 18px;
+}
+.header-main .carousel-caption .solcial-media {
+  position: relative;
+  padding-left: 36px;
+}
+.header-main .carousel-caption .solcial-media::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  height: 1px;
+  width: 24px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.header-main .carousel-caption .solcial-media li {
+  display: inline-block;
+  margin-right: 12px;
+}
+.header-main .carousel-caption .solcial-media li a {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  font-size: 22px;
+  text-align: center;
+  line-height: 44px;
+  color: #ffffff;
+}
+.header-main .mice {
+  display: block;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  margin-left: -12px;
+  z-index: 9;
+  width: 24px;
+  height: 36px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+.header-main .mice::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  margin-left: -1px;
+  top: 2px;
+  height: 12px;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.7);
+  animation: scroll 0.75s ease alternate infinite;
+}
+@keyframes scroll {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 6px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

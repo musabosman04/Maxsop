@@ -1,0 +1,232 @@
+@font-face {
+  font-family: BloggerSans-Bold;
+  src:  url(fonts/Blogger/BloggerSans-Bold.ttf),
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+@media (min-width: 1600px){
+	.container, .container-lg, .container-md, .container-sm, .container-xl{
+		max-width: 1440px!important;
+	}
+}
+$primary-color: #0033FF;
+$secondary-color: #FF0090;
+$overlay-color: #190053;
+$accent-color: #FFFF00;
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+// Pre-modules
+.btn-lg-square{
+	padding: 9px 18px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #ffffff!important;
+	margin-left: 24px;
+	background-color: $primary-color;
+}
+.btn-lg-rounded{
+	padding: 12px 24px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #ffffff;
+	background-color: $secondary-color;
+	border-radius: 120px;
+	margin-top: 24px;
+	transition: ease 0.3s;
+	&.btn-icon{
+		padding-left: 2px;
+		font-size: 16px;
+	}
+	i{
+		width: 42px;
+		height: 42px;
+		background-color: #ffffff;
+		color:$secondary-color;
+		border-radius: 50%;
+		box-sizing: border-box;
+		text-align: center;
+		padding: 12px 0;
+		margin-right: 7px;				
+	}
+
+	&:hover{
+		color: #ffffff;
+		background-color: #C70070;
+		text-decoration: none;
+	}
+}
+
+section{
+	width: 100%;
+	height: auto;
+	padding: 96px 0;
+
+	.section-heading{
+		font-size: 42px;
+		font-weight: 600;
+		color: #000000;
+		margin-bottom: 12px;
+		.focused-text{
+			font-weight: 800;
+			color: $primary-color;
+		}
+	}
+}
+
+
+
+
+
+// Navigation
+.nav-clean{
+	  background-color: transparent;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+	  padding: 12px 0;
+	  z-index: 3;
+	  .navbar-nav{
+		  .nav-item{
+			  .nav-link{
+				  padding-left: 16px;
+				  padding-right: 16px;
+				  color: rgba($color: #ffffff, $alpha: 1);
+			  }
+			&.active .nav-link{
+				text-decoration: underline;
+			}
+		  }
+	  }
+}
+
+
+// main header design
+.header-main{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	box-sizing: border-box;	
+
+	.carousel-indicators{
+		position: absolute!important;
+		left: 100%;
+		margin-left: -48px!important;
+		top: 0%;
+		height: 100%;
+		z-index: 3;
+		width: 48px;
+		display: block;
+		margin-right: 0;
+		padding-top: 45vh;
+		li{
+			width: 14px;
+			height: 14px;
+			background-color: transparent;
+			border: 3px solid $accent-color;
+			margin: 9px 0;
+			border-radius: 50%;
+			box-sizing: border-box;
+			&.active{
+				background-color: $accent-color;
+				border: 0;
+			}
+		}
+	}
+
+	// caption
+	.carousel-caption{
+		left: 0!important;
+		right: 0!important;
+		top: 0!important;
+		bottom: 0!important;
+		text-align: left;
+		padding-top: 25vh;
+		background-color: rgba($color: $overlay-color, $alpha: 50%);		
+
+		.title-strong{
+			font-weight: 800;
+			font-size: 64px;
+			color: $accent-color;
+		}
+		.title-medium{
+			font-weight: 500;
+			font-size: 58px;
+		}
+		.title-light{
+			font-weight: 400;
+			border-left: 2px solid rgba($color: #ffffff, $alpha: 1);
+			padding-left: 18px;
+		}
+		
+		.solcial-media{
+			position: relative;
+			padding-left: 36px;
+			&::after{
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 50%;
+				height: 1px;
+				width: 24px;
+				background-color: rgba($color: #ffffff, $alpha: 0.3);
+			}
+			li{
+				display: inline-block;
+				margin-right: 12px;
+				a{
+					display: block;
+					background-color: rgba($color: #ffffff, $alpha: 0.3);
+					width: 42px;
+					height: 42px;
+					border-radius: 50%;
+					box-sizing: border-box;
+					font-size: 22px;
+					text-align: center;
+					line-height: 44px;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+
+	// mice
+	.mice{
+		display: block;
+		position: absolute;
+		bottom: 24px;
+		left: 50%;
+		margin-left: -12px;
+		z-index: 9;
+		width: 24px;
+		height: 36px;
+		border: 1px solid #ffffff;
+		border-radius: 10px;		
+		&::after{
+			position: absolute;
+			content: "";
+			left: 50%;
+			margin-left: -1px;
+			top: 2px;
+			height: 12px;
+			width: 2px;
+			background-color: rgba($color: #ffffff, $alpha: 0.7);
+			animation: scroll 0.75s ease alternate infinite;
+		}
+
+		@keyframes scroll {
+			from{
+				top: 0px;
+			}
+			to{
+				top: 6px;
+			}
+		}
+	}
+
+}

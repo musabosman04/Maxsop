@@ -9,10 +9,11 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">            
     <script src="https://kit.fontawesome.com/a2d7159702.js" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 
@@ -130,11 +131,14 @@
 
 
     <!-- Platform -->
-    <section class="platform-app">
+    <section class="about">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">                    
                     <img class="img-fluid" src="images/assets/about.png" alt="#">
+                    <div class="text-overlay">
+                        <p class="pt-5">Top level industrial <span>service</span> over the <span>Millions</span> Customer & 100 of Corporate Clients Across the <span>World</span></p>
+                    </div>
                 </div>
                 <div class="col-md-6 pt-md-5">
                     <h1 class="section-heading"> About <span class="focused-text d-block">Our Company</span> </h1>
@@ -153,50 +157,149 @@
 
 
 
-    <!-- services overview -->
-    <section class="biggopti">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="app-bg-1">
-                        <img class="img-app" src="images/solutions/biggopti.png" alt="#">
+    <!-- Our solutions -->
+    <section class="solution">
+
+            <h1 class="section-heading text-center mb-4">Our Solutions</h1>
+        
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="img-container" src="media/images/abc.png" alt="#">
+                        <div class="cover-art">
+                            <h3 class="title">Business Software</h3>
+                            <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.Lorem
+                            ipsum, or lipsum as it is sometimes known,</p>
+                            <a class="btn-inspect" href="#">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="img-container" src="media/images/123.png" alt="#">
+                        <div class="cover-art">
+                            <h3 class="title">Intelligent solution</h3>
+                            <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                                graphic or web designs.Lorem
+                                ipsum, or lipsum as it is sometimes known,</p>
+                            <a class="btn-inspect" href="#">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="img-container" src="media/images/mdev.png" alt="#">
+                        <div class="cover-art">
+                            <h3 class="title">Mobile Developmet</h3>
+                            <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                                graphic or web designs.Lorem
+                                ipsum, or lipsum as it is sometimes known,</p>
+                            <a class="btn-inspect" href="#">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="img-container" src="media/images/abc.png" alt="#">
+                        <div class="cover-art">
+                            <h3 class="title">Business Software</h3>
+                            <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                                graphic or web designs.Lorem
+                                ipsum, or lipsum as it is sometimes known,</p>
+                            <a class="btn-inspect" href="#">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="img-container" src="media/images/mdev.png" alt="#">
+                        <div class="cover-art">
+                            <h3 class="title">Mobile Developmet</h3>
+                            <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                                graphic or web designs.Lorem
+                                ipsum, or lipsum as it is sometimes known,</p>
+                            <a class="btn-inspect" href="#">View Details</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h2 class="section-title my-4">Fast Growing <br> Buy & Sell Platform</h2>
-                    <p class="text-muted">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying
-                        out print, graphic or web designs.Lorem
-                        ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or
-                        web designs.Lorem ipsum,
-                        or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web
-                        designs.</p>
+                <!-- Add Arrows -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+    </section>
 
 
-                    <!-- features -->
-                    <ul class="app-features pl-0 my-4">
-                        <li class="d-inline-block items">
-                            <span class="icon-block"><img src="images/assets/Icon feather-shopping-bag.png"
-                                    alt=""></span>
-                            <span class="label-text"> Instant Selling </span>
-                        </li>
-                        <li class="d-inline-block items">
-                            <span class="icon-block"><img src="images/assets/Icon awesome-users.png" alt=""></span>
-                            <span class="label-text"> Millions Customer </span>
-                        </li>
-                        <li class="d-inline-block items">
-                            <span class="icon-block"><img src="images/assets/Icon metro-shop.png" alt=""></span>
-                            <span class="label-text"> Big Collections </span>
-                        </li>
-                    </ul>
 
 
-                    <!-- full view btn -->
-                    <div>
-                        <a class="btn btn-warning text-light py-2 px-3" href="#">Learn More</a>
+    <!-- Solutions type -->
+    <section class="featured-solutions">
+        <div class="container">
+            <h1 class="section-heading text-center"><span class="focused-text underline">Skyoti</span> for your all needs</h1>
+            <p class="text-muted text-center text-md">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.Lorem
+            ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs</p>
+
+            <div class="grid-box mt-5">
+                <div class="box-single">
+                    <a class="item" href="#">
+                        <img class="bg-image" src="media/images/mad-blog.png" alt="#">
+                        <div class="cover-area">
+                            <h3 class="title">Mobile & Fintech</h3>
+                            <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.Lorem
+                            ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="box-multiple">
+                    <div class="box-container">
+                        <a class="item" href="#">
+                            <img class="bg-image" src="media/images/mdev.jpg" alt="#">
+                            <div class="cover-area">
+                                <h3 class="title">Security Services</h3>
+                                <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                                    graphic or web designs.Lorem
+                                </p>
+                            </div>
+                        </a>
                     </div>
-
+                    <div class="box-container">
+                        <a class="item" href="#">
+                            <img class="bg-image" src="media/images/OIP.jpg" alt="#">
+                            <div class="cover-area">
+                                <h3 class="title">Cloud Development</h3>
+                                <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                                    graphic or web designs.Lorem
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-container">
+                        <a class="item" href="#">
+                            <img class="bg-image" src="media/images/SOC-Banner-1024x624.jpg" alt="#">
+                            <div class="cover-area">
+                                <h3 class="title">Enterprise Solution</h3>
+                                <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                                    graphic or web designs.Lorem
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-container">
+                        <a class="item" href="#">
+                            <img class="bg-image" src="media/images/mdev.jpg" alt="#">
+                            <div class="cover-area">
+                                <h3 class="title">Micro Services</h3>
+                                <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                                    graphic or web designs.Lorem
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
+
+
+
+            <!-- button -->
+            <div class="text-center pt-5">
+                <a href="#" class="btn-lg-rounded">View More Services</a>
+            </div>
+
         </div>
     </section>
 
@@ -205,47 +308,34 @@
 
 
 
-    <!-- Quiz app -->
-    <section class="quizee">
+    <!-- approach skyoti -->
+    <section class="approach">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="title pr-5">Play Quiz <br> To Justify Yourself</h2>
-                    <p class="text-muted my-4 pr-5">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
-                        in laying
-                        out print, graphic or web designs.Lorem
-                        ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or
-                        web designs.Lorem ipsum,
-                        or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web
-                        designs..
+                    <h3 class="section-heading-md mt-md-5 pt-md-5">Our Approach</h3>
+                    <p class="article-md text-light">
+                        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.Lorem
+                        ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs
                     </p>
-                    <a class="btn btn-primary py-2 px-3" href="#"> <i class="fas fa-download"></i> Download App</a>
                 </div>
                 <div class="col-md-6">
-                    <div class="app-bg-2">
-                        <img class="img-fluid" src="images/solutions/iPhone X.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- Event management app -->
-    <section class="events">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="app-bg">
-                        <img class="img-app" src="images/solutions/eventbrite-application-1520x500.png" alt="#">
-                        <div class="app-features">
-                            <h2 class="text-light">Manage Your Events</h2>
-                            <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
-                                laying out print, graphic or web designs.Lorem ipsum, or lipsum as it is sometimes
-                                known, is dummy text used in laying out print</p>
-                            <a href="#" class="btn btn-light">Learn More</a>
+                    <div class="skyoti-statics">
+                        <div class="item">
+                            <h1 class="title"></h1>
+                            <p class="tagline"></p>
+                        </div>                        
+                        <div class="item">
+                            <h1 class="title"></h1>
+                            <p class="tagline"></p>
+                        </div>                        
+                        <div class="item">
+                            <h1 class="title"></h1>
+                            <p class="tagline"></p>
+                        </div>                        
+                        <div class="item">
+                            <h1 class="title"></h1>
+                            <p class="tagline"></p>
                         </div>
                     </div>
                 </div>
@@ -256,61 +346,17 @@
 
 
 
-    <!-- More Apps -->
-    <section class="notice">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 class="title text-capitalize pr-md-5 pt-5">Instant notify <br> from latest notice</h2>
-                    <p class="text-muted pr-md-5">
-                        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic
-                        or web designs.Lorem
-                        ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <div class="app-bg-4">
-                        <img class="img-fluid" src="images/solutions/notice.png" alt="#">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 
 
-    <!-- About Skyoti -->
-    <section class="what-is-skyoti">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="text-dark">
-                        We are Why?
-                    </h2>
-                </div>
-
-                <div class="col-md-12 text-center">
-                    <blockquote class="blockquote">
-                        <p class="lead-text text-primary">Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-                            used in laying out print, graphic or web designs.Lorem
-                            ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print.</p>
-                        <footer class="blockquote-footer">Skyoti <cite title="Source Title">Empowring Technology</cite>
-                        </footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
-    <!-- testimonial -->
 
-    <section class="testimonial">
-        <div class="container">
 
-        </div>
-    </section>
+
+
+
 
 
 
@@ -321,9 +367,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 16,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>

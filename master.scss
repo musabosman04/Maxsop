@@ -13,9 +13,11 @@ $primary-color: #0033FF;
 $secondary-color: #FF0090;
 $overlay-color: #190053;
 $accent-color: #FFFF00;
+$sweet-bg: #FFF5F5;
 
 body{
-    font-family: 'Nunito', sans-serif;
+	font-family: 'Nunito', sans-serif;
+	overflow-x: hidden;
 }
 
 // Pre-modules
@@ -26,6 +28,11 @@ body{
 	color: #ffffff!important;
 	margin-left: 24px;
 	background-color: $primary-color;
+	transition: ease 0.3s;
+	&:hover{
+		color: #ffffff;
+		background-color: #0027C5;
+	}
 }
 .btn-lg-rounded{
 	padding: 12px 24px;
@@ -42,7 +49,7 @@ body{
 	}
 	i{
 		width: 42px;
-		height: 42px;
+		height: 42px;		
 		background-color: #ffffff;
 		color:$secondary-color;
 		border-radius: 50%;
@@ -72,7 +79,20 @@ section{
 		.focused-text{
 			font-weight: 800;
 			color: $primary-color;
+			&.underline{
+				text-decoration: underline;
+			}
 		}
+	}
+	.section-heading-md{
+		font-size: 36px;
+		font-weight: 600;
+		color: $accent-color;
+	}
+	.text-md{
+		max-width: 840px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -230,3 +250,289 @@ section{
 	}
 
 }
+
+
+// About section
+.about{
+	.text-overlay{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 20%;
+		font-size: 28px;
+		color: #ffffff;
+		font-weight: lighter;
+		z-index: 3;
+		span{
+			font-weight: normal;
+			color: $accent-color;
+			text-decoration: underline;
+		}
+	}
+}
+
+
+// solution carousel
+.solution{
+	position: relative;
+	&::after{
+		position: absolute;
+		content: "";
+		left: -5%;
+		top: 0;
+		width: 110%;
+		height: 100%;
+		background-color: $sweet-bg;
+		transform: rotate(-3deg);
+		z-index: -1;
+	}
+
+	.swiper-container {
+    	width: 100%;
+		height: auto;
+
+		.swiper-slide {
+			width: 100%;
+			height: 520px;
+
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+			overflow: hidden;
+			position: relative;
+			
+			.img-container{
+				width: 100%;
+				height: 100%;
+				object-position: center;
+				object-fit: cover;
+			}
+			.cover-art{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: auto;
+				overflow: hidden;
+				padding: 36px;
+				padding-bottom: 48px;
+				.title{
+					color: #FFFF00;
+				}
+				.text-light{
+					font-weight: lighter;
+					margin-bottom: 24px;
+				}
+				.btn-inspect{
+					color: #ffffff;
+					border: 1px solid #ffffff;
+					padding: 9px 18px;
+					border-radius: 48px;
+					transition: ease 0.3s;
+					&:hover{
+						color: #000000;
+						background-color: #ffffff;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.swiper-button-prev,
+		.swiper-button-next{
+			background-color: #ffffff;
+			width: 36px;
+			height: 36px;
+			box-sizing: border-box;
+			&::after{
+				transform: scale(0.5);
+				color: $secondary-color;
+				font-weight: bold;
+			}
+			&.swiper-button-disabled{
+				opacity: 0;
+			}
+		}
+		.swiper-button-prev{
+			left: 0px;
+		}		
+		.swiper-button-next{
+			right: 0px;
+		}
+    }
+}
+
+
+
+
+
+
+
+// featured-solutions{
+	%bg-image{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	%cover-area{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: auto;
+		padding: 48px;
+		z-index: 3;	
+	}
+	%overlay-bg{
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color: $overlay-color, $alpha: 70%);
+		z-index: 1;
+		transition: ease 0.5s;
+	}
+
+	.featured-solutions{
+		.grid-box{
+			position: relative;			
+			display: flex;
+			&::after{
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: 0;
+				width: 280px;
+				height: 280px;
+				margin-left: -80px;
+				margin-bottom: -180px;
+				background-image: url(images/assets/dot-circle.png);
+				background-size: 95%;
+				background-repeat: no-repeat;
+				z-index: -1;
+			}
+			.box-single{
+				width: 48%;
+				height: 560px;
+				.item{
+					position: relative;
+					display: block;
+					overflow: hidden;
+					height: 100%;
+					&::after{
+						@extend %overlay-bg;
+					}
+					&:hover{
+						.bg-image{
+							transform: scale(1.1);
+							filter: blur(1px);
+						}
+						&::after{
+							background-color: rgba($color: $primary-color, $alpha: 90%);
+						}
+					}
+					.bg-image{
+						@extend %bg-image;
+						transition: ease 0.5s;
+					}
+					.cover-area{
+						@extend %cover-area;						
+						.title{
+							color: #FFFF00;
+							font-weight: 600;
+							font-size: 36px;
+						}
+					}
+				}
+			}
+			.box-multiple{
+				width: 52%;
+				display: flex;
+				overflow: hidden;
+				flex-wrap: wrap;
+				.box-container{
+					width: 50%;
+					height: 280px;
+					.item{
+						position: relative;
+						display: block;
+						overflow: hidden;
+						height: 100%;							
+						&::after{
+							@extend %overlay-bg;
+						}
+						&:hover{
+							.bg-image{
+								transform: scale(1.1);
+								filter: blur(1px);
+							}
+							&::after{
+								background-color: rgba($color: $primary-color, $alpha: 95%);
+							}
+						}				
+						.bg-image{
+							@extend %bg-image;
+							transition: ease 0.5s;
+						}
+						.cover-area{
+							@extend %cover-area;
+							padding: 12px;
+							.title{
+								color: #FFFF00;
+								font-weight: normal;
+								font-size: 22px;
+							}
+							p{
+								font-size: 13px;
+								font-weight: lighter;
+								line-height: 17px;
+							}
+						}
+					}				
+				}
+			}
+		}
+	}
+
+
+
+
+// approach
+	.approach{
+		background-image: url(images/assets/eventbrite-application.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		.article-md{
+			font-size: 18px;
+		}
+		.skyoti-statics{
+			width: 360px;
+			height: 360px;
+			position: relative;			
+			float: right;
+			.item{
+				width: 50%;
+				height: 50%;
+				overflow: hidden;
+				box-sizing: border-box;				
+				padding: 18px;							
+				border: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+				border-radius: 50%;
+			}
+		}
+	}

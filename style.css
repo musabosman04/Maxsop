@@ -94,6 +94,11 @@ section .section-heading-md {
   font-weight: 600;
   color: #FFFF00;
 }
+section .heading-light {
+  font-weight: lighter;
+  font-size: 32px;
+  color: #FF0090;
+}
 section .text-md {
   max-width: 840px;
   margin-left: auto;
@@ -106,7 +111,7 @@ section .text-md {
   left: 0;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 12px 0;
   z-index: 3;
 }
@@ -832,6 +837,195 @@ section .text-md {
   padding-top: 36px;
   font-size: 13px;
   font-weight: lighter;
+}
+
+.header-services {
+  background-image: url("https://www.clavax.com/Clavax/media/img/about_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+}
+.header-services .slogan {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 42px;
+  border-left: 1px solid #ffffff;
+  padding: 0 18px;
+  margin-top: 72px;
+}
+.header-services .slogan span {
+  font-size: 32px;
+  font-weight: lighter;
+  color: #FFFF00;
+}
+
+.services .card-md {
+  padding: 72px 48px;
+  display: block;
+  background-color: #f9f9f9;
+  margin: 16px auto;
+  transition: ease 0.3s;
+  position: relative;
+  box-sizing: border-box;
+}
+.services .card-md::after {
+  position: absolute;
+  content: "";
+  left: 16px;
+  top: 16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.services .card-md:hover {
+  text-decoration: none;
+  transform: translateY(-12px);
+  background-color: #0033FF;
+}
+.services .card-md:hover .title {
+  color: #FFFF00;
+}
+.services .card-md:hover .text-summary {
+  color: #ffffff !important;
+}
+.services .card-md:hover::after {
+  border-color: #ffffff;
+}
+.services .card-md .title {
+  color: #0033FF;
+  font-weight: bold;
+}
+.services .card-md .text-summary {
+  margin-top: 24px;
+}
+
+.process {
+  background-color: #190053;
+}
+.process .accordion {
+  max-width: 840px;
+  margin: 0 auto;
+}
+.process .accordion .card-area {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.process .accordion .card-area:nth-last-child(1) {
+  border-bottom: 0;
+}
+.process .accordion .card-area .btn-link {
+  outline: 0;
+  border: 0;
+  font-size: 22px;
+  color: #FF0090;
+  text-decoration: none;
+  padding: 18px 0;
+  width: 100%;
+  text-align: left;
+  box-shadow: none !important;
+  position: relative;
+}
+.process .accordion .card-area .btn-link .fas {
+  position: absolute;
+  right: 12px;
+  top: 28px;
+  font-size: 18px;
+  transition: ease 0.5s;
+}
+.process .accordion .card-area .btn-link[aria-expanded=true] {
+  color: #FFFF00;
+}
+.process .accordion .card-area .btn-link[aria-expanded=true] .fas {
+  transform: rotate(180deg);
+}
+.process .accordion .card-area .text-body {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-weight: lighter;
+  margin-bottom: 48px;
+}
+
+.explore .center-content {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  height: 100%;
+}
+.explore.explore-bg {
+  background-color: #FFF5F5;
+}
+
+.static-header {
+  width: 100%;
+  padding: 96px 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.static-header::after {
+  position: absolute;
+  content: "";
+  background-color: rgba(25, 0, 83, 0.5);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.static-header .content {
+  position: relative;
+  max-width: 840px;
+  z-index: 3;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  padding-left: 16px;
+}
+.static-header .content .title-heading {
+  color: yellow;
+}
+
+.form-area form {
+  margin: 0 auto;
+  max-width: 840px;
+}
+.form-area form .form-control {
+  border-radius: 0;
+  min-height: 48px;
+  box-shadow: none !important;
+}
+.form-area form .form-control:focus {
+  border: 1px solid #0033FF;
+}
+
+.leadership {
+  background-image: url("https://www.clavax.com/Clavax/media/img/leadership_bg.jpg");
+  position: relative;
+}
+.leadership .card-block {
+  background-color: #FFF5F5;
+  padding: 32px;
+  max-width: 640px;
+}
+.leadership .card-block .title {
+  color: #FF0090;
+}
+
+.products .card-products {
+  display: block;
+  background-color: #ffffff;
+  padding: 24px;
+  margin: 16px 0;
+  transition: ease 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.products .card-products:hover {
+  text-decoration: none;
+  transform: scale(1.05);
+}
+.products .card-products img {
+  height: 64px;
+  max-width: 100%;
+}
+.products .card-products .description {
+  margin-top: 24px;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

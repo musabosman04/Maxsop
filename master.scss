@@ -102,6 +102,11 @@ section{
 		font-weight: 600;
 		color: $accent-color;
 	}
+	.heading-light{
+		font-weight: lighter;
+		font-size: 32px;
+		color: $secondary-color;
+	}
 	.text-md{
 		max-width: 840px;
 		margin-left: auto;
@@ -120,7 +125,7 @@ section{
 	  left: 0;
 	  top: 0;
 	  width: 100%;
-	  border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+	  border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.1);
 	  padding: 12px 0;
 	  z-index: 3;
 	  .navbar-nav{
@@ -942,3 +947,236 @@ section{
 			font-weight: lighter;
 		}
 	}
+
+
+
+
+
+
+
+// header-services
+.header-services{
+	background-image: url('https://www.clavax.com/Clavax/media/img/about_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 120px 0;
+	
+	.slogan{
+		  color: #ffffff;
+		  font-weight: bold;
+		  font-size: 42px;
+		  border-left: 1px solid #ffffff;
+		  padding: 0 18px;
+		  margin-top: 72px;
+		  
+		  span{
+			 font-size: 32px;
+			 font-weight: lighter;
+			 color: $accent-color;
+		  }
+	}
+}
+
+
+// all services
+.services{
+	.card-md{
+		padding: 72px 48px;
+		display: block;		
+		background-color: #f9f9f9;
+		margin: 16px auto;
+		transition: ease 0.3s;
+		position: relative;
+		box-sizing: border-box;
+		&::after{
+			position: absolute;
+			content: "";
+			left: 16px;
+			top: 16px;
+			right: 16px;
+			bottom: 16px;
+			border: 1px solid rgba($color: #000000, $alpha: 0.3);
+		}
+		&:hover{
+			text-decoration: none;
+			transform: translateY(-12px);
+			background-color: $primary-color;
+			.title{
+				color: $accent-color;
+			}
+			.text-summary{
+				color: #ffffff!important;
+			}
+			&::after{
+				border-color: #ffffff;
+			}
+		}
+		.title{
+			color: $primary-color;
+			font-weight: bold;
+		}
+		.text-summary{
+			margin-top: 24px;
+		}
+	}
+}
+
+.process{
+	background-color: $overlay-color;	
+	.accordion{
+		 max-width: 840px;
+		 margin: 0 auto;
+		.card-area{
+			border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+			&:nth-last-child(1){
+                border-bottom: 0;
+			}			
+			.btn-link{
+				outline: 0;
+				border: 0;
+				font-size: 22px;
+				color: $secondary-color;
+				text-decoration: none;
+				padding: 18px 0;
+				width: 100%;
+				text-align: left;
+				box-shadow: none!important;
+				position: relative;
+				.fas{
+					position: absolute;
+					right: 12px;
+					top: 28px;
+					font-size: 18px;
+					transition: ease 0.5s;
+				}
+				&[aria-expanded="true"]{
+					color: $accent-color;
+					.fas{
+						transform: rotate(180deg);
+					}
+				}
+			}
+			.text-body{
+				color: rgba($color: #ffffff, $alpha: 0.5)!important;
+				font-weight: lighter;
+				margin-bottom: 48px;
+			}
+		}
+	}
+}
+
+
+// explore services
+.explore{
+	.center-content{
+		display: flex;
+		vertical-align: middle;
+		align-items: center;
+		height: 100%;
+	}
+	&.explore-bg{
+		background-color: $sweet-bg;
+	}
+}
+
+
+
+
+
+
+
+// static-header
+.static-header{
+	width: 100%;
+	padding: 96px 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;		
+	&::after{
+		position: absolute;
+		content: "";
+		background-color: rgba($color: $overlay-color, $alpha: 0.5);
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;				
+	}
+	.content{
+		position: relative;
+		max-width: 840px;
+		z-index: 3;
+		border-left: 2px solid rgba($color: #ffffff, $alpha: 0.3);
+		padding-left: 16px;
+		.title-heading{
+			color: rgba($color: $accent-color, $alpha: 1);
+		}
+	}
+}
+
+
+
+
+
+
+// form-area
+.form-area{
+	form{
+		margin: 0 auto;
+		max-width: 840px;
+		.form-control{
+			border-radius: 0;
+			min-height: 48px;
+			box-shadow: none!important;
+			&:focus{
+				border: 1px solid $primary-color;
+			}
+		}
+	}
+}
+
+
+
+
+// leadership
+.leadership{
+	background-image: url('https://www.clavax.com/Clavax/media/img/leadership_bg.jpg');
+	position: relative;
+	.card-block{
+		background-color: $sweet-bg;
+		padding: 32px;
+		max-width: 640px;
+		.title{
+			color: $secondary-color;
+		}
+	}
+}
+
+
+
+
+// products{
+.products{
+	// background-color: $sweet-bg;
+	.card-products{
+		display: block;
+		background-color: #ffffff;
+		padding: 24px;
+		margin: 16px 0;
+		transition: ease 0.3s;
+		box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.05);
+
+		&:hover{
+			text-decoration: none;
+			transform: scale(1.05);
+		}
+		img{
+			height: 64px;
+			max-width: 100%;
+		}
+		.description{
+			margin-top: 24px;
+			text-decoration: none;
+		}
+	}
+}

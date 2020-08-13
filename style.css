@@ -843,15 +843,25 @@ section .text-md {
   background-image: url("https://www.clavax.com/Clavax/media/img/about_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 120px 0;
+  padding: 140px 0;
 }
 .header-services .slogan {
   color: #ffffff;
   font-weight: bold;
   font-size: 42px;
-  border-left: 1px solid #ffffff;
-  padding: 0 18px;
   margin-top: 72px;
+  position: relative;
+  padding-left: 64px;
+}
+.header-services .slogan::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 18px;
+  width: 48px;
+  height: 2px;
+  background-color: rgba(255, 255, 0, 0.7);
+  z-index: 1;
 }
 .header-services .slogan span {
   font-size: 32px;
@@ -860,13 +870,14 @@ section .text-md {
 }
 
 .services .card-md {
-  padding: 72px 48px;
+  padding: 36px;
   display: block;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 245, 245, 0.3);
   margin: 16px auto;
   transition: ease 0.3s;
   position: relative;
   box-sizing: border-box;
+  text-align: center;
 }
 .services .card-md::after {
   position: absolute;
@@ -875,7 +886,7 @@ section .text-md {
   top: 16px;
   right: 16px;
   bottom: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .services .card-md:hover {
   text-decoration: none;
@@ -891,12 +902,14 @@ section .text-md {
 .services .card-md:hover::after {
   border-color: #ffffff;
 }
-.services .card-md .title {
-  color: #0033FF;
-  font-weight: bold;
+.services .card-md .img-icon {
+  height: 64px;
+  margin-bottom: 24px;
 }
-.services .card-md .text-summary {
-  margin-top: 24px;
+.services .card-md .title {
+  color: #190053;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .process {
@@ -916,7 +929,7 @@ section .text-md {
   outline: 0;
   border: 0;
   font-size: 22px;
-  color: #FF0090;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   padding: 18px 0;
   width: 100%;
@@ -1026,6 +1039,127 @@ section .text-md {
 .products .card-products .description {
   margin-top: 24px;
   text-decoration: none;
+}
+
+.portfolio .portfolio-item {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background-color: #FFF5F5;
+  margin: 24px 0;
+}
+.portfolio .portfolio-item .media {
+  width: 70%;
+  height: 480px;
+  overflow: hidden;
+  transition: ease 0.3s;
+}
+.portfolio .portfolio-item .media .img-block {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.portfolio .portfolio-item .content {
+  width: 30%;
+  height: 100%;
+  padding: 72px;
+  transition: ease 0.3s;
+}
+.portfolio .portfolio-item .content .title {
+  font-weight: bold;
+}
+.portfolio .portfolio-item .content a {
+  opacity: 0;
+  transition: ease 0.3s;
+}
+.portfolio .portfolio-item:hover .media {
+  width: 50%;
+}
+.portfolio .portfolio-item:hover .content {
+  width: 50%;
+}
+.portfolio .portfolio-item:hover a {
+  opacity: 1;
+}
+
+.blog-header {
+  width: 100%;
+  padding: 120px 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.blog-header::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 0, 83, 0.75);
+}
+.blog-header .content {
+  position: relative;
+  z-index: 3;
+}
+.blog-header .content .title {
+  color: #FFFF00;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.blogs .blog-card {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  margin: 16px auto;
+}
+.blogs .blog-card .img-blog {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: blur(1.5px);
+}
+.blogs .blog-card .content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(25, 0, 83, 0.25);
+  padding: 36px;
+  overflow: hidden;
+  transition: ease 0.3s;
+  padding-top: 55%;
+}
+.blogs .blog-card .content .title {
+  color: #ffffff;
+}
+.blogs .blog-card .content .summary {
+  color: rgba(255, 255, 255, 0.75);
+}
+.blogs .blog-card:hover .content {
+  background-color: rgba(25, 0, 83, 0.9);
+}
+.blogs .blog-card:hover .content .title {
+  color: #FFFF00;
+}
+.blogs .blog-card .card-info {
+  margin: 0;
+  padding: 0;
+}
+.blogs .blog-card .card-info li {
+  display: inline;
+  color: #ffffff;
+  font-size: 11px;
+  margin-right: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

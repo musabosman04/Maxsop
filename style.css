@@ -132,6 +132,7 @@ section .text-md {
   padding-left: 0;
   left: 0;
   top: 100%;
+  width: auto;
   transform: translateY(36px);
   opacity: 0;
   visibility: hidden;
@@ -140,7 +141,7 @@ section .text-md {
 .nav-clean .navbar-nav .nav-item .dropdown::after {
   position: absolute;
   content: "";
-  left: 12px;
+  left: 24px;
   top: -3px;
   width: 12px;
   height: 12px;
@@ -148,9 +149,12 @@ section .text-md {
   transform: rotate(45deg);
   z-index: -1;
 }
+.nav-clean .navbar-nav .nav-item .dropdown li {
+  display: block;
+  min-width: 180px;
+}
 .nav-clean .navbar-nav .nav-item .dropdown li a {
   padding: 12px 18px;
-  min-width: 140px;
   width: auto;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.5);
@@ -883,7 +887,6 @@ section .text-md {
 }
 
 .header-services {
-  background-image: url("https://www.clavax.com/Clavax/media/img/about_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 140px 0;
@@ -1007,6 +1010,23 @@ section .text-md {
 }
 .explore.explore-bg {
   background-color: #FFF5F5;
+}
+
+.tools .tools-list {
+  padding-left: 0;
+  text-align: center;
+}
+.tools .tools-list li {
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.tools .tools-list li img {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .static-header {
@@ -1252,6 +1272,90 @@ section .text-md {
 .solutions .card-filled .light-text {
   font-weight: lighter;
   color: #868686;
+}
+
+.split-bg {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.split-bg::after {
+  position: absolute;
+  content: "";
+  left: 40%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(25, 0, 83, 0.75);
+}
+.split-bg .splits-content {
+  padding: 48px 0;
+  margin-left: 40%;
+  padding-left: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.featured-services .features-list {
+  margin: 3px;
+  overflow: hidden;
+}
+.featured-services .features-list .icon {
+  width: auto;
+}
+.featured-services .features-list .icon img {
+  display: block;
+  height: 48px;
+  border-radius: 0;
+  padding: 6px;
+}
+.featured-services .features-list .content .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+.featured-services .features-list .content p {
+  font-size: 15px;
+}
+
+.tools {
+  background-color: #FFF5F5;
+}
+
+.simple-header {
+  width: 100%;
+  height: auto;
+  padding-top: 140px;
+  padding-bottom: 48px;
+  background-color: #190053;
+}
+.simple-header .text-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FFFF00;
+  text-decoration: overline;
+}
+
+.breadcrumbs {
+  padding: 15px 0 0 0;
+}
+.breadcrumbs li {
+  padding: 2px 12px;
+  position: relative;
+}
+.breadcrumbs li::after {
+  position: absolute;
+  content: "/";
+  right: -3px;
+  top: 3px;
+  color: #999999;
+}
+.breadcrumbs li:nth-last-child(1)::after {
+  display: none;
+}
+.breadcrumbs li:nth-last-child(1) a {
+  color: #999999;
 }
 
 /*# sourceMappingURL=style.css.map */

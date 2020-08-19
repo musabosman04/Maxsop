@@ -1227,6 +1227,43 @@ section{
 
 
 
+// map-container
+.map-container{
+	position: relative;
+	iframe{
+		width: 100%;
+		height: 70vh;
+		display: block;
+		border: 0;
+	}
+	.contact-info{
+		background-color: $sweet-bg;
+		position: relative;
+		top: -72px;
+		display: flex;
+		box-shadow: 0 5px 7px rgba($color: #000000, $alpha: 0.05);
+		text-align: center;
+		.contact-card{
+			padding: 48px;
+			span{
+				font-size: 28px;
+				color: $secondary-color;
+			}
+			h4{
+				font-weight: bold;
+			}
+			&:nth-child(2){
+				border-left: 1px solid $primary-color;
+				border-right: 1px solid $primary-color;
+			}
+		}
+		
+	}
+}
+
+
+
+
 // leadership
 .leadership{
 	background-image: url('https://www.clavax.com/Clavax/media/img/leadership_bg.jpg');

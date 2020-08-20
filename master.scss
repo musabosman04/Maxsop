@@ -26,6 +26,10 @@ $sweet-bg: #FFF5F5;
 	text-align: center;
 	line-height: 44px;
 	color: #ffffff;
+	transition: ease 0.15s;
+	&:hover{
+		background-color: $secondary-color;
+	}
 }
 
 body{
@@ -193,6 +197,11 @@ section{
 		}
 	}
 }
+@media screen and (max-width: 990px){
+
+}
+
+
 
 
 // main header design
@@ -978,23 +987,23 @@ section{
 		.footer-title{
 			font-weight: bold;
 			color: $accent-color;
-			text-decoration: underline;
 			font-size: 18px;
 		}
 		.footer-menu{
-			padding-left: 12px;
+			padding-left: 3px;
 			li{
 				display: block;
 				margin-top: 9px;
 				a{
-					color: #ffffff;
+					color: rgba($color: #ffffff, $alpha: 0.7);
 					font-weight: lighter;
 				}
 			}
 		}
 		.copyright-text{
-			border-top: 1px solid rgba($color: #ffffff, $alpha: 0.3);
-			padding-top: 36px;
+			border-top: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+			padding-top: 24px;
+			margin-top: 36px;
 			font-size: 13px;
 			font-weight: lighter;
 		}
@@ -1237,24 +1246,22 @@ section{
 		border: 0;
 	}
 	.contact-info{
-		background-color: $sweet-bg;
+		background-color: $overlay-color;
 		position: relative;
 		top: -72px;
-		display: flex;
+		display: flex;		
 		box-shadow: 0 5px 7px rgba($color: #000000, $alpha: 0.05);
 		text-align: center;
 		.contact-card{
-			padding: 48px;
+			padding: 24px 48px;
+			width: 33.333333333%;
 			span{
 				font-size: 28px;
-				color: $secondary-color;
-			}
-			h4{
-				font-weight: bold;
+				color: $sweet-bg;
 			}
 			&:nth-child(2){
-				border-left: 1px solid $primary-color;
-				border-right: 1px solid $primary-color;
+				border-left: 1px solid rgba($color: #ffffff, $alpha: 0.15);
+				border-right: 1px solid rgba($color: #ffffff, $alpha: 0.15)
 			}
 		}
 		
@@ -1606,7 +1613,7 @@ section{
 		font-size: 32px;
 		font-weight: bold;
 		color: $accent-color;
-		text-decoration: overline;
+		text-transform: uppercase;		
 	}
 }
 

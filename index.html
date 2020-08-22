@@ -20,31 +20,31 @@
     <!-- Primary navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-clean">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler ml-3" id="drawer-expand" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="index.html"><img src="images/assets/Skyoti.png" height="42" alt="#"></a>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <div class="collapse navbar-collapse" id="drwaer-toggle">
+                <span class="drawer-close d-lg-none" id="drawer-collapse" type="button"> X </span>
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mb-4 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="services.html">Services</a>
                         <ul class="dropdown">
                             <li class="d-block">
-                                <a href="services.html" class="d-block">Apps Development</a>
+                                <a href="service-details.html" class="d-block">Consultation</a>
                             </li>                            
                             <li class="d-block">
-                                <a href="services.html" class="d-block">Software Marketing</a>
+                                <a href="service-details.html" class="d-block">Enterprise Service</a>
                             </li>                            
                             <li class="d-block">
-                                <a href="services.html" class="d-block">Mobile, Web & UI/UX</a>
+                                <a href="service-details.html" class="d-block">Design & Branding</a>
                             </li>                            
                             <li class="d-block">
-                                <a href="services.html" class="d-block">Industrial Management</a>
+                                <a href="service-details.html" class="d-block">Illustrations</a>
                             </li>                            
                             <li class="d-block">
-                                <a href="services.html" class="d-block">Data & Networking</a>
-                            </li>
+                                <a href="services.html" class="d-block">More Services</a>
+                            </li>                            
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -81,7 +81,7 @@
                     </li>
                 </ul>
 
-                <a class="btn-lg-square" href="get-quote.html">Get a Quote</a>
+                <a class="btn-lg-square ml-0 ml-md-3" href="get-quote.html">Get a Quote</a>
             </div>
         </div>
     </nav>
@@ -173,7 +173,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 pt-md-5">
-                    <h1 class="section-heading"> About <span class="focused-text d-block">Our Company</span> </h1>
+                    <h1 class="section-heading mt-4"> About <span class="focused-text d-block">Our Company</span> </h1>
                     <p class="text-lead text-muted mb-5">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.Lorem
                     ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.Lorem ipsum,
                     or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
@@ -194,7 +194,7 @@
 
             <h1 class="section-heading text-center mb-4">Our Solutions</h1>
         
-            <div class="swiper-container">
+            <div class="swiper-container" id="solutions">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img class="img-container" src="media/images/abc.png" alt="#">
@@ -537,7 +537,7 @@
                     <p class="text-muted">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.Lorem ipsum, or lipsum as it is sometimes known</p>
                 </div>
                 <div class="col-md-8">
-                    <div class="swiper-container swiper-container-2 pb-5">
+                    <div class="swiper-container pb-5" id="testimonial">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="testimonial-card">                                    
@@ -600,7 +600,7 @@
                     <img class="img-fluid" src="images/assets/company-asset.png" alt="">
                 </div>
                 <div class="col-md-6">
-                    <div class="pl-5">
+                    <div class="pl-lg-5">
                         <h1 class="section-heading">Our Core <span class="focused-text">Features</span></h1>
                         <p class="text-muted">
                             We understand what your business means to you, that's is why we thoroughly discuss to understand your requirements considering the target audience's needs and latest market trends.
@@ -662,7 +662,7 @@
     <section class="partner">
         <div class="container">
             <h1 class="section-heading text-center pb-4">Our <span class="focused-text">Partners</span></h1>
-            <div class="swiper-container swiper-container-3">
+            <div class="swiper-container" id="clients">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img class="img-thumb" src="media/images/partners/creative-market.jpg" alt="#">                                                                        
@@ -762,28 +762,63 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 4,
-            spaceBetween: 16,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });        
-        
-        var swiper = new Swiper('.swiper-container-2', {
-            slidesPerView: 2,
-            spaceBetween: 16,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });        
-        
-        var swiper = new Swiper('.swiper-container-3', {
-            slidesPerView: 6,
-            spaceBetween: 16,
+        $( "#drawer-expand" ).click(function() {
+            $("#drwaer-toggle").addClass('open-drawer');
+        });       
+        $( "#drawer-collapse" ).click(function() {
+            $("#drwaer-toggle").removeClass('open-drawer');
         });
+
+
+        var X = window.matchMedia("(max-width: 990px)");
+            myFunction(X) // Call listener function at run time
+            X.addListener(myFunction) 
+
+            function myFunction(X) {
+                
+                if (X.matches) { // If media query matches
+                    var swiper = new Swiper('#solutions', {
+                        slidesPerView: 1.1,  
+                        spaceBetween: 12,  
+                    }); 
+                    
+                    var swiper = new Swiper('#testimonial', {
+                        slidesPerView: 1.1,
+                        spaceBetween: 6,
+                    }); 
+
+                    var swiper = new Swiper('#clients', {
+                        slidesPerView: 2.2,
+                        spaceBetween: 6,
+                    });
+                } 
+            
+
+                else {
+                    var swiper = new Swiper('#solutions', {
+                        slidesPerView: 4,
+                        spaceBetween: 16,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },            
+                    }); 
+
+                    var swiper = new Swiper('#testimonial', {
+                        slidesPerView: 2,
+                        spaceBetween: 16,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    });
+
+                    var swiper = new Swiper('#clients', {
+                        slidesPerView: 6,
+                        spaceBetween: 16,
+                    });
+                } 
+            }       
     </script>
 </body>
 </html>

@@ -1,2 +1,2 @@
-# skyoti-html
+# MaxSOP html template
 Startup template

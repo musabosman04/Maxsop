@@ -31,7 +31,9 @@ $sweet-bg: #FFF5F5;
 		background-color: $secondary-color;
 	}
 }
-
+html {
+	scroll-behavior: smooth;
+  }
 body{
 	font-family: 'Nunito', sans-serif;
 	overflow-x: hidden;
@@ -127,9 +129,6 @@ section{
 		}
 	}
 }
-
-
-
 
 
 // Navigation
@@ -537,6 +536,7 @@ section{
 			background-color: #ffffff;
 			width: 36px;
 			height: 36px;
+			border-radius: 100px;
 			box-sizing: border-box;
 			&::after{
 				transform: scale(0.5);
@@ -725,7 +725,7 @@ section{
 		.article-md{
 			font-size: 18px;
 		}
-		.skyoti-statics{
+		.maxsop-statics{
 			width: 360px;
 			height: 360px;
 			position: relative;			

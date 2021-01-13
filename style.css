@@ -25,6 +25,10 @@
   background-color: #FF0090;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   overflow-x: hidden;
@@ -477,6 +481,7 @@ section .text-md {
   background-color: #ffffff;
   width: 36px;
   height: 36px;
+  border-radius: 100px;
   box-sizing: border-box;
 }
 .solution .swiper-container .swiper-button-prev::after,
@@ -636,7 +641,7 @@ section .text-md {
 .approach .article-md {
   font-size: 18px;
 }
-.approach .skyoti-statics {
+.approach .maxsop-statics {
   width: 360px;
   height: 360px;
   position: relative;
@@ -644,7 +649,7 @@ section .text-md {
   display: flex;
   flex-wrap: wrap;
 }
-.approach .skyoti-statics .item {
+.approach .maxsop-statics .item {
   width: 50%;
   height: 50%;
   overflow: hidden;
@@ -652,14 +657,14 @@ section .text-md {
   padding: 18px;
   text-align: center;
 }
-.approach .skyoti-statics .item .title {
+.approach .maxsop-statics .item .title {
   color: #FFFF00;
   font-weight: bold;
 }
-.approach .skyoti-statics .item p {
+.approach .maxsop-statics .item p {
   color: #ffffff;
 }
-.approach .skyoti-statics::after {
+.approach .maxsop-statics::after {
   position: absolute;
   content: "";
   left: 50%;
@@ -669,7 +674,7 @@ section .text-md {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.4);
 }
-.approach .skyoti-statics::before {
+.approach .maxsop-statics::before {
   position: absolute;
   content: "";
   left: 0;
